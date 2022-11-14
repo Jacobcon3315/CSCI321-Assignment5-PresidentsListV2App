@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		86D3107D2922AD320063165C /* PresidentsListV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3107C2922AD320063165C /* PresidentsListV2App.swift */; };
-		86D3107F2922AD320063165C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3107E2922AD320063165C /* ContentView.swift */; };
 		86D310812922AD330063165C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D310802922AD330063165C /* Assets.xcassets */; };
 		86D310842922AD330063165C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D310832922AD330063165C /* Preview Assets.xcassets */; };
+		86E5318C2922B020000803D0 /* PresidentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E531892922B020000803D0 /* PresidentDetailView.swift */; };
+		86E5318D2922B020000803D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E5318A2922B020000803D0 /* ContentView.swift */; };
+		86E5318E2922B020000803D0 /* PresidentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E5318B2922B020000803D0 /* PresidentCell.swift */; };
+		86E531962922B105000803D0 /* PresidentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E531942922B105000803D0 /* PresidentsViewModel.swift */; };
+		86E531972922B105000803D0 /* PresidentsListModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E531952922B105000803D0 /* PresidentsListModelView.swift */; };
+		86E5319A2922B11B000803D0 /* USPresident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E531992922B11B000803D0 /* USPresident.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86D310792922AD320063165C /* PresidentsListV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresidentsListV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D3107C2922AD320063165C /* PresidentsListV2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresidentsListV2App.swift; sourceTree = "<group>"; };
-		86D3107E2922AD320063165C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86D310802922AD330063165C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86D310832922AD330063165C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86E531892922B020000803D0 /* PresidentDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresidentDetailView.swift; sourceTree = "<group>"; };
+		86E5318A2922B020000803D0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86E5318B2922B020000803D0 /* PresidentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresidentCell.swift; sourceTree = "<group>"; };
+		86E531942922B105000803D0 /* PresidentsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresidentsViewModel.swift; sourceTree = "<group>"; };
+		86E531952922B105000803D0 /* PresidentsListModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresidentsListModelView.swift; sourceTree = "<group>"; };
+		86E531992922B11B000803D0 /* USPresident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USPresident.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,10 @@
 		86D3107B2922AD320063165C /* PresidentsListV2 */ = {
 			isa = PBXGroup;
 			children = (
+				86E531982922B10C000803D0 /* Models */,
+				86E531932922B0EA000803D0 /* View Models */,
+				86E531882922B002000803D0 /* Views */,
 				86D3107C2922AD320063165C /* PresidentsListV2App.swift */,
-				86D3107E2922AD320063165C /* ContentView.swift */,
 				86D310802922AD330063165C /* Assets.xcassets */,
 				86D310822922AD330063165C /* Preview Content */,
 			);
@@ -65,6 +77,33 @@
 				86D310832922AD330063165C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86E531882922B002000803D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86E5318A2922B020000803D0 /* ContentView.swift */,
+				86E5318B2922B020000803D0 /* PresidentCell.swift */,
+				86E531892922B020000803D0 /* PresidentDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86E531932922B0EA000803D0 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				86E531952922B105000803D0 /* PresidentsListModelView.swift */,
+				86E531942922B105000803D0 /* PresidentsViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		86E531982922B10C000803D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86E531992922B11B000803D0 /* USPresident.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D3107F2922AD320063165C /* ContentView.swift in Sources */,
+				86E5318C2922B020000803D0 /* PresidentDetailView.swift in Sources */,
+				86E5318E2922B020000803D0 /* PresidentCell.swift in Sources */,
+				86E5318D2922B020000803D0 /* ContentView.swift in Sources */,
+				86E531972922B105000803D0 /* PresidentsListModelView.swift in Sources */,
 				86D3107D2922AD320063165C /* PresidentsListV2App.swift in Sources */,
+				86E531962922B105000803D0 /* PresidentsViewModel.swift in Sources */,
+				86E5319A2922B11B000803D0 /* USPresident.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

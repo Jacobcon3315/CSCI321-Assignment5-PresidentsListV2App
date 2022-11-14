@@ -2,7 +2,7 @@
 //  PresidentsListV2App.swift
 //  PresidentsListV2
 //
-//  Created by Madi Lumsden on 11/14/22.
+//  Created by Jacob Conacher on 11/14/22.
 //
 
 import SwiftUI
