@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  PresidentsList
+//  PresidentsListV2
 //
 //  Created by Jacob Conacher on 11/14/22.
 //
@@ -26,8 +26,8 @@ struct ContentView: View {
             .navigationTitle("US Presidents")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .onAppear {
-            presidentListVM.loadPropertyList()
+        .task {
+            await presidentListVM.getPresidents()
         }
     }
 }

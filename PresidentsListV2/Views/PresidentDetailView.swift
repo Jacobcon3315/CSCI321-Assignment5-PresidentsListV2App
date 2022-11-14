@@ -1,6 +1,6 @@
 //
 //  PresidentDetailView.swift
-//  PresidentsList
+//  PresidentsListV2
 //
 //  Created by Jacob Conacher on 11/14/22.
 //
@@ -36,12 +36,14 @@ struct PresidentDetailView: View {
             Text("(\(president.startDate) to \(president.endDate))")
                 .italic()
             
-            Image("seal")
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(16)
-                .padding(.horizontal)
-            
+            AsyncImage(url: URL(string: president.url)) { image in
+                image.resizable()
+                    .scaledToFit()
+                    .cornerRadius(16)
+            } placeholder: {
+                ProgressView()
+            }
+            .padding(.horizontal)
             
             Text("Nickname")
                 .font(.title2)

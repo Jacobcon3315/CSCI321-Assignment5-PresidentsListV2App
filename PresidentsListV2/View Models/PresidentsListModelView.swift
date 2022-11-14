@@ -1,6 +1,6 @@
 //
 //  PresidentsListModelView.swift
-//  PresidentsList
+//  PresidentsListV2
 //
 //  Created by Jacob Conacher on 11/14/22.
 //
@@ -12,21 +12,17 @@ class PresidentsListViewModel: ObservableObject {
     
     @Published var presidents: [PresidentsViewModel] = []
     
-    func loadPropertyList() {
-        guard let path = Bundle.main.path(forResource: "presidents", ofType: "plist"), let xml = FileManager.default.contents(atPath: path) else {
-            fatalError("Unable to access property list presidents.plist")
-        }
+    func getPresidents() async {
         
         do {
-            var presidents = try PropertyListDecoder().decode([USPresident].self, from: xml)
-            
+            var presidents = try await WebService().fetchPresidents(url: Constants.Urls.presidentsUrl)
             presidents.sort {
                 $0.number < $1.number
             }
             
             self.presidents = presidents.map(PresidentsViewModel.init)
         } catch {
-            fatalError("Unable to decode property list presidents.plist")
+            print(error)
         }
     }
 }

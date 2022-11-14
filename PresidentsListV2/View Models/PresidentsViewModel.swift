@@ -1,6 +1,6 @@
 //
 //  PresidentsViewModel.swift
-//  PresidentsList
+//  PresidentsListV2
 //
 //  Created by Jacob Conacher on 11/14/22.
 //
@@ -35,8 +35,12 @@ struct PresidentsViewModel {
         return president.party
     }
     
+    var url: String {
+        return president.url
+    }
+    
     static var `default`: PresidentsViewModel {
-        let president = USPresident(name: "Andrew Jackson", number: 7, startDate: "March 4, 1829", endDate: "March 3, 1837", nickname: "\"Old Hickory\"", party: "Democrat")
+        let president = USPresident(name: "Andrew Jackson", number: 7, startDate: "March 4, 1829", endDate: "March 3, 1837", nickname: "\"Old Hickory\"", party: "Democrat", url: "https://www.potus.com/wp-content/uploads/07_andrew_jackson_1_gallery.jpg")
         return PresidentsViewModel(president: president)
     }
 }

@@ -1,6 +1,6 @@
 //
 //  USPresident.swift
-//  PresidentsList
+//  PresidentsListV2
 //
 //  Created by Jacob Conacher on 11/14/22.
 //
@@ -15,6 +15,7 @@ struct USPresident: Decodable {
     var endDate = ""
     var nickname = ""
     var party = ""
+    var url = ""
     
     private enum CodingKeys: String, CodingKey {
         case name = "Name"
@@ -23,5 +24,6 @@ struct USPresident: Decodable {
         case endDate = "End Date"
         case nickname = "Nickname"
         case party = "Political Party"
+        case url = "URL"
     }
 }
