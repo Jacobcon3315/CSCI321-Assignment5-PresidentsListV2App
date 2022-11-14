@@ -2,7 +2,7 @@
 //  USPresident.swift
 //  PresidentsList
 //
-//  Created by Jacob Conacher on 11/14/22. 
+//  Created by Jacob Conacher on 11/14/22.
 //
 
 import Foundation
